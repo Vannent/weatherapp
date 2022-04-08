@@ -40,7 +40,7 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
         weatherDegrees.className = "weatherDegrees";
 
             const degreeOne = document.createElement("div");
-            degreeOne.className = "degreeOne";
+            degreeOne.className = "minmax";
             degreeOne.innerText = temp_min.toFixed(0);
 
             const degreeTwo = document.createElement("div");
@@ -56,7 +56,7 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
             degreeFour.innerText = ((temp_max + temp) / 2).toFixed(0);
 
             const degreeFive = document.createElement("div");
-            degreeFive.className = "degreeFive"; 
+            degreeFive.className = "minmax"; 
             degreeFive.innerText = temp_max.toFixed(0);
 
         const weatherStatus = document.createElement("div");
