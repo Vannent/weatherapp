@@ -44,7 +44,7 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
             degreeOne.innerText = temp_min.toFixed(0);
 
             const degreeTwo = document.createElement("div");
-            degreeTwo.className = "degreeTwo";
+            degreeTwo.className = "average";
             degreeTwo.innerText = ((temp_min + temp) / 2).toFixed(0);
 
             const degreeThree = document.createElement("div");
@@ -52,7 +52,7 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
             degreeThree.innerText = temp.toFixed(0);
 
             const degreeFour = document.createElement("div");
-            degreeFour.className = "degreeFour";
+            degreeFour.className = "average";
             degreeFour.innerText = ((temp_max + temp) / 2).toFixed(0);
 
             const degreeFive = document.createElement("div");
