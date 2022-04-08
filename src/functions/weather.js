@@ -41,23 +41,23 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
 
             const degreeOne = document.createElement("div");
             degreeOne.className = "minmax";
-            degreeOne.innerText = temp_min.toFixed(0);
+            degreeOne.innerText = temp_min.toFixed(0) + "°";
 
             const degreeTwo = document.createElement("div");
             degreeTwo.className = "average";
-            degreeTwo.innerText = ((temp_min + temp) / 2).toFixed(0);
+            degreeTwo.innerText = ((temp_min + temp) / 2).toFixed(0) + "°";
 
             const degreeThree = document.createElement("div");
             degreeThree.className = "degreeThree";
-            degreeThree.innerText = temp.toFixed(0);
+            degreeThree.innerText = temp.toFixed(0) + "°";
 
             const degreeFour = document.createElement("div");
             degreeFour.className = "average";
-            degreeFour.innerText = ((temp_max + temp) / 2).toFixed(0);
+            degreeFour.innerText = ((temp_max + temp) / 2).toFixed(0) + "°";
 
             const degreeFive = document.createElement("div");
             degreeFive.className = "minmax"; 
-            degreeFive.innerText = temp_max.toFixed(0);
+            degreeFive.innerText = temp_max.toFixed(0) + "°";
 
         const weatherStatus = document.createElement("div");
         weatherStatus.className = "weatherStatus"
@@ -67,7 +67,7 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
             const humiditayTitle = document.createElement("h1");
             humiditayTitle.textContent = "Humidity";
             const humiditayContent = document.createElement("p");
-            humiditayContent.innerText = humidity.toFixed(0) + " %";
+            humiditayContent.innerText = humidity.toFixed(0) + "%";
 
         const windspeed = document.createElement("div");
         windspeed.className = "windspeed";
@@ -81,7 +81,7 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
             const feelsLikeTitle = document.createElement("h1");
             feelsLikeTitle.textContent = "Feels Like";
             const feelsLikeContent = document.createElement("p");
-            feelsLikeContent.innerText = feels_like;
+            feelsLikeContent.innerText = feels_like + "°";
             
 
     weather.append(cityTitle, weatherDescription, weatherDegrees, weatherStatus);
