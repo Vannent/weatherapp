@@ -67,26 +67,29 @@ const weather = (name, description, temp, temp_min, temp_max, humidity, feels_li
             const humiditayTitle = document.createElement("h1");
             humiditayTitle.textContent = "Humidity";
             const humiditayContent = document.createElement("p");
+            humiditayContent.innerText = humidity.toFixed(0) + " %";
 
         const windspeed = document.createElement("div");
         windspeed.className = "windspeed";
             const windspeedTitle = document.createElement("h1");
             windspeedTitle.textContent = "Windspeed";
             const windspeedContent = document.createElement("p");
+            windspeedContent.innerText = speed.toFixed(0) + " mph";
 
-        const pressure = document.createElement("div");
-        pressure.className = "pressure";
-            const pressureTitle = document.createElement("h1");
-            pressureTitle.textContent = "Pressure";
-            const pressureContent = document.createElement("p");
+        const feelsLike = document.createElement("div");
+        feelsLike.className = "feelsLike";
+            const feelsLikeTitle = document.createElement("h1");
+            feelsLikeTitle.textContent = "Feels Like";
+            const feelsLikeContent = document.createElement("p");
+            feelsLikeContent.innerText = feels_like;
             
 
     weather.append(cityTitle, weatherDescription, weatherDegrees, weatherStatus);
     weatherDegrees.append(degreeOne, degreeTwo, degreeThree, degreeFour, degreeFive);
-    weatherStatus.append(humiditay, windspeed, pressure);
+    weatherStatus.append(humiditay, windspeed, feelsLike);
     humiditay.append(humiditayTitle, humiditayContent);
     windspeed.append(windspeedTitle, windspeedContent);
-    pressure.append(pressureTitle, pressureContent);
+    feelsLike.append(feelsLikeTitle, feelsLikeContent);
 
     const main = document.querySelector("main");
     main.appendChild(weather);
