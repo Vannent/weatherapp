@@ -1,7 +1,7 @@
 import loadsearchButton from "../functions/searchButton";
 import { fetchCity } from "../functions/weather";
 
-const home = () => {
+export const home = () => {
     const home = document.createElement("div");
     home.className = "home";
 
