@@ -1,4 +1,5 @@
 import loadsearchButton from "../functions/searchButton";
+import { fetchCity } from "../functions/weather";
 
 const home = () => {
     const home = document.createElement("div");
@@ -17,6 +18,7 @@ const loadHome = () => {
     main.textContent = "";
     main.appendChild(home());
     loadsearchButton();
+    fetchCity("New York");
 }
 
 export default loadHome;
