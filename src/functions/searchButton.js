@@ -1,3 +1,6 @@
+import { home } from "../pages/home";
+import loadWeather, { fetchCity } from "./weather";
+
 const searchButton = () => {
     const searchButton = document.createElement("div");
     searchButton.className = "searchButton-container";
@@ -14,15 +17,26 @@ const searchButton = () => {
                 showButton = false;
             } else if (showButton === false) {
                 searchInput.style.display = "none";
+                const main = document.querySelector("main");
+                main.textContent = "";
+                main.append(home())
+                loadsearchButton();
+                fetchCity(searchInput.value);
                 showButton = true;
-            }
-        })
+                searchInput.placeholder = "San Francisco...";
+            };
+        });
 
         const searchInput = document.createElement("input");
         searchInput.className = "searchInput";
         searchInput.type = "text";
         searchInput.placeholder = "San Francisco...";
         searchInput.style.display = "none";
+        searchInput.addEventListener("click", (e) => {
+            searchInput.placeholder = "";
+        });
+
+
 
     searchButton.append(button, searchInput);
     return searchButton;
