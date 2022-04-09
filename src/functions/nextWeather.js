@@ -1,6 +1,6 @@
 export const fetchNextWeather = (city) => {
     fetch("http://api.openweathermap.org/data/2.5/forecast?q="
-    + city + // hidestream
+    + city +
     "&units=imperial&appid=a7b91dd96a75372ea8906b2a8dee414d")
     .then((response) => {
         if (!response.ok) {
