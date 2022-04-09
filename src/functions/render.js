@@ -19,7 +19,7 @@ function render() {
     content.appendChild(container);
     container.appendChild(main());
     container.appendChild(footer());
-    if (localStorage.getItem("username") === null) {
+    if (localStorage.getItem("userName") === null) {
         loadgetUser();
     } else {
         loadHome();
