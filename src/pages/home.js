@@ -2,6 +2,8 @@ import { fetchNextWeather } from "../functions/nextWeather";
 import loadsearchButton from "../functions/searchButton";
 import { fetchCity } from "../functions/weather";
 
+let noice = false; // stops fetchNextWeather from loading before fetchCity.
+
 export const home = () => {
     const home = document.createElement("div");
     home.className = "home";
@@ -20,6 +22,7 @@ const loadHome = () => {
     main.appendChild(home());
     loadsearchButton();
     fetchCity("New York");
+    noice = true;
     fetchNextWeather("New York");
 }
 
