@@ -19,8 +19,6 @@ export const fetchNextWeather = (city) => {
 
 
 const nextWeather = (data) => {
-    console.log(days[dayName])
-    console.log(data.list[0])
     const nextWeather = document.createElement("div"); 
     nextWeather.className = "nextWeather";
         const dayOne = document.createElement("div");
