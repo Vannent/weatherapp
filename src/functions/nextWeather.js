@@ -1,4 +1,6 @@
-export const fetchNextWeather = (city) => {
+import { fetchCity } from "./weather";
+
+export const fetchNextWeather = async (city) => {
     fetch("http://api.openweathermap.org/data/2.5/forecast?q="
     + city +
     "&units=imperial&appid=a7b91dd96a75372ea8906b2a8dee414d")
@@ -118,6 +120,7 @@ const nextWeather = (data) => {
 
     nextWeather.append(dayOne, dayTwo, dayThree, dayFour, dayFive);
 
+    await fetchCity();
     const main = document.querySelector("main");
     main.appendChild(nextWeather);
     

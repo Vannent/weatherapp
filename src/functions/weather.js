@@ -1,4 +1,4 @@
-export const fetchCity = (city) => {
+export const fetchCity = async (city) => {
     fetch("https://api.openweathermap.org/data/2.5/weather?q="
     + city + 
     "&units=imperial&appid=a7b91dd96a75372ea8906b2a8dee414d")

@@ -1,3 +1,4 @@
+import loadHome from "../pages/home";
 import loadgetUser from "./getUser";
 
 const main = () => {
@@ -18,7 +19,12 @@ function render() {
     content.appendChild(container);
     container.appendChild(main());
     container.appendChild(footer());
-    loadgetUser();
+    if (localStorage.getItem("username") === null) {
+        loadgetUser();
+    } else {
+        loadHome();
+    }
+
 }
 
 export default render;
