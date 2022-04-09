@@ -1,3 +1,4 @@
+import { fetchNextWeather } from "../functions/nextWeather";
 import loadsearchButton from "../functions/searchButton";
 import { fetchCity } from "../functions/weather";
 
@@ -19,6 +20,7 @@ const loadHome = () => {
     main.appendChild(home());
     loadsearchButton();
     fetchCity("New York");
+    fetchNextWeather("New York");
 }
 
 export default loadHome;
