@@ -1,5 +1,5 @@
 import { home } from "../pages/home";
-import loadWeather, { fetchCity } from "./weather";
+import { fetchCity } from "./weather";
 
 const searchButton = () => {
     const searchButton = document.createElement("div");
