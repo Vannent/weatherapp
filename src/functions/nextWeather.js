@@ -120,7 +120,6 @@ const nextWeather = (data) => {
 
     nextWeather.append(dayOne, dayTwo, dayThree, dayFour, dayFive);
 
-    await fetchCity();
     const main = document.querySelector("main");
     main.appendChild(nextWeather);
     
