@@ -20,7 +20,7 @@ const loadHome = () => {
     main.appendChild(home());
     loadsearchButton();
     fetchCity("New York");
-    setTimeout(function() { fetchNextWeather("New York"); }, 0.0001);
+    setTimeout(function() { fetchNextWeather("New York"); }, 0.001);
     // fetchNextWeather("New York")
 }
 
