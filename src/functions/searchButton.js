@@ -1,4 +1,5 @@
 import { home } from "../pages/home";
+import { fetchNextWeather } from "./nextWeather";
 import { fetchCity } from "./weather";
 
 const searchButton = () => {
@@ -22,6 +23,7 @@ const searchButton = () => {
                 main.append(home())
                 loadsearchButton();
                 fetchCity(searchInput.value);
+                fetchNextWeather(searchInput.value);
                 showButton = true;
                 searchInput.placeholder = "San Francisco...";
             };
