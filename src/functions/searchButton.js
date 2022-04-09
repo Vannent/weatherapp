@@ -23,8 +23,8 @@ const searchButton = () => {
                 main.append(home())
                 loadsearchButton();
                 fetchCity(searchInput.value);
-                fetchNextWeather(searchInput.value);
                 showButton = true;
+                fetchNextWeather(searchInput.value);
                 searchInput.placeholder = "San Francisco...";
             };
         });
